@@ -1,0 +1,22 @@
+<div *ngIf="message"><p style="color: red">{{ message }}</p></div>
+<form #bookForm="ngForm" (ngSubmit)="editBook(bookForm)">
+  <input type="hidden" *ngIf="book" [(ngModel)]="book.id" name="id">
+  <h4>Edit book</h4>
+  <hr style="border: 1px solid black"/>
+  <div class="form-group">
+    <label>Book title:</label>
+    <input type="text" *ngIf="book" name="bookTitle" [(ngModel)]="book.title" class="form-control" style="border: 1px solid black"/>
+  </div>
+  <div>
+    <label>Author:</label>
+    <input type="text" *ngIf="book" class="form-control" [(ngModel)]="book.author" name="lastName" style="border: 1px solid black">
+  </div>
+  <div>
+    <label>Description:</label>
+    <input type="text" *ngIf="book" class="form-control" [(ngModel)]="book.description" name="lastName" style="border: 1px solid black">
+  </div>
+
+  <div class="text-center">
+    <button type="submit">Save</button>
+  </div>
+</form>

@@ -1,0 +1,23 @@
+<div *ngIf="message">{{message}}</div>
+<table class="table">
+  <thead class="thead-dark">
+  <tr>
+    <th scope="col">Id</th>
+    <th scope="col">title</th>
+    <th scope="col">author</th>
+    <th scope="col">deception</th>
+    <th scope="col">Edit</th>
+    <th scope="col">delete</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let book of books">
+    <th scope="row">{{book.id}}</th>
+    <td>{{book.title}}</td>
+    <td>{{book.author}}</td>
+    <td>{{book.description}}</td>
+    <td><button (click)="editBook(book.id)">Edit</button></td>
+    <td><button (click)="deleteBook(book.id)" >Delete</button></td>
+  </tr>
+  </tbody>
+</table>
