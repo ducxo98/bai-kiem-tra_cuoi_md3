@@ -5,15 +5,15 @@
   <hr style="border: 1px solid black"/>
   <div class="form-group">
     <label>Book title:</label>
-    <input type="text" *ngIf="book" name="bookTitle" [(ngModel)]="book.title" class="form-control" style="border: 1px solid black"/>
+    <input type="text" *ngIf="book" name="title" [(ngModel)]="book.title" class="form-control" style="border: 1px solid black"/>
   </div>
   <div>
     <label>Author:</label>
-    <input type="text" *ngIf="book" class="form-control" [(ngModel)]="book.author" name="lastName" style="border: 1px solid black">
+    <input type="text" *ngIf="book" class="form-control" [(ngModel)]="book.author" name="author" style="border: 1px solid black">
   </div>
   <div>
     <label>Description:</label>
-    <input type="text" *ngIf="book" class="form-control" [(ngModel)]="book.description" name="lastName" style="border: 1px solid black">
+    <input type="text" *ngIf="book" class="form-control" [(ngModel)]="book.description" name="description" style="border: 1px solid black">
   </div>
 
   <div class="text-center">
